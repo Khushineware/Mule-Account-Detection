@@ -1,0 +1,14 @@
+# Dataset files
+data/
+*.csv
+
+# Models
+model/
+*.pkl
+
+# Python cache
+__pycache__/
+
+# Virtual environment
+.venv/
+
