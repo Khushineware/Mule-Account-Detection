@@ -1,14 +1,12 @@
-# Dataset files
-data/
-*.csv
-
-# Models
-model/
-*.pkl
+# Only dataset CSV files
+data/*.csv
 
 # Python cache
 __pycache__/
+*.pyc
 
 # Virtual environment
 .venv/
 
+# Streamlit cache
+.streamlit/
