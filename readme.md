@@ -1,86 +1,201 @@
-# 🕵️ Mule Detection System (Fraud Detection using Machine Learning)
+# 🕵️ FlowShield AI – Intelligent Mule Account Detection Platform
 
-An end-to-end **machine learning system to detect mule/fraudulent bank accounts** using transaction behavior, feature engineering, and predictive modeling.
+An end-to-end **AI-powered fraud detection system** designed to identify suspicious and mule accounts by analyzing transactional and behavioral banking data.
 
-The system is designed to be modular, scalable, and production-ready with explainability support.
+FlowShield AI combines **Machine Learning, Anomaly Detection, Feature Engineering, and Explainable AI** to proactively detect fraudulent account activity, reduce financial losses, and support faster investigation workflows.
+
+---
+
+## 📌 Dataset Access
+
+Due to GitHub file size limitations, the original banking transaction dataset is not included in this repository.
+
+### Dataset Download
+
+Download the dataset and place it in the following directory:
+
+```text
+data/transactions.csv
+```
+
+After adding the dataset, the project can be trained and executed normally.
 
 ---
 
 ## 🚀 Project Objective
 
-To detect **fraudulent or mule accounts** from banking transaction data using machine learning techniques like **XGBoost / Isolation-based models**, combined with feature engineering and explainability (SHAP).
+Financial institutions process millions of transactions daily, making manual fraud detection increasingly difficult. Traditional rule-based monitoring systems often struggle to identify evolving fraud patterns and suspicious account behavior.
+
+FlowShield AI addresses this challenge by leveraging Machine Learning and behavioral analytics to:
+
+* Detect suspicious and mule accounts
+* Identify hidden fraud patterns
+* Generate intelligent risk scores
+* Support proactive fraud prevention
+* Improve transparency through Explainable AI
 
 ---
 
 ## 🧠 Key Features
 
-- Robust data preprocessing pipeline
-- Handling missing values and sentinel values (`-1`)
-- Automatic date-based feature engineering
-- Label encoding for categorical features
-- ML-based fraud detection model
-- SHAP-based explainability support
-- Reusable training and inference pipeline
-- Modular Python architecture
+### 🔍 Intelligent Mule Account Detection
+
+Identifies suspicious and mule accounts using transactional and behavioral patterns.
+
+### 📊 Advanced Feature Engineering
+
+Extracts meaningful behavioral, transactional, and temporal fraud indicators from raw banking data.
+
+### 🧠 AI-Powered Risk Scoring
+
+Assigns risk levels to accounts based on learned fraud patterns.
+
+### ⚠️ Anomaly Detection Engine
+
+Detects unusual account behavior and hidden fraud signals using Isolation Forest.
+
+### 🔎 Explainable AI (SHAP)
+
+Provides transparent explanations for model predictions and highlights influential features.
+
+### 🚨 Intelligent Alert Generation
+
+Flags high-risk accounts for proactive investigation and monitoring.
+
+### 🛡️ Fraud Prevention Framework
+
+Supports early intervention and reduces operational and financial risk.
 
 ---
 
 ## ⚙️ Setup Instructions
 
-### 1️⃣ Clone the repository
+### 1️⃣ Clone the Repository
 
-
+```bash
 git clone https://github.com/your-username/mule-detection-system.git
 cd mule-detection-system
+```
 
-### 2️⃣ Create a virtual environment
+### 2️⃣ Create a Virtual Environment
+
+```bash
 python -m venv .venv
+```
 
-Activate it:
+Activate the environment:
 
-Windows:
+**Windows**
+
+```bash
 .venv\Scripts\activate
+```
 
-Mac/Linux:
+**Linux / macOS**
+
+```bash
 source .venv/bin/activate
+```
 
-### 3️⃣ Install dependencies
+### 3️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
+### 4️⃣ Add Dataset
 
-### 4️⃣ Add dataset
+Place the dataset file inside:
 
-Place your dataset inside:
+```text
 data/transactions.csv
+```
 
-### ▶️ How to Run the Project
-🔹 Train the Model
+---
+
+## ▶️ Running the Project
+
+### Train the Model
+
+```bash
 python src/train_model.py
+```
 
-## This will:
-- Load and preprocess data
-- Perform feature engineering
-- Train ML model
-- Save model artifacts inside /model
-- Generate reports in /reports
+This process will:
 
-🔹 Run Predictions
+* Load and preprocess transaction data
+* Perform feature engineering
+* Train fraud detection models
+* Save model artifacts inside `/model`
+* Generate analytical reports inside `/reports`
+
+---
+
+### Run Predictions
+
+```bash
 python src/predict.py
+```
 
-🔹 (Optional) Run App
-If you are using Streamlit UI:
+---
+
+### Launch the Streamlit Dashboard
+
+```bash
 streamlit run app.py
+```
 
+---
 
-### 🔄 Workflow Overview
-Raw Data
-   ↓
-Preprocessing (cleaning + missing handling)
-   ↓
-Feature Engineering (behavioral + time-based features)
-   ↓
-Encoding (categorical → numeric)
-   ↓
-Model Training (XGBoost / Isolation Forest)
-   ↓
-Prediction + Explainability (SHAP)
+## 🔄 Workflow Overview
+
+```text
+Banking Transaction Data
+            ↓
+      Data Preprocessing
+            ↓
+      Feature Engineering
+            ↓
+    Feature Transformation
+            ↓
+      Model Training
+   (XGBoost + Isolation Forest)
+            ↓
+      Risk Classification
+            ↓
+     Explainability (SHAP)
+            ↓
+ Intelligent Alert Generation
+            ↓
+ Suspicious Account Detection
+```
+
+---
+
+## 🛠️ Technology Stack
+
+| Category             | Technologies          |
+| -------------------- | --------------------- |
+| Programming Language | Python                |
+| Data Processing      | Pandas, NumPy         |
+| Machine Learning     | XGBoost, Scikit-Learn |
+| Anomaly Detection    | Isolation Forest      |
+| Explainable AI       | SHAP                  |
+| Visualization        | Matplotlib            |
+| User Interface       | Streamlit             |
+| Model Persistence    | Joblib                |
+| Development Tools    | Git, GitHub, VS Code  |
+
+---
+
+## 📈 Expected Outcomes
+
+* Early detection of mule and suspicious accounts
+* Reduced financial fraud exposure
+* Improved investigation efficiency
+* Lower false-positive rates
+* Explainable and transparent fraud predictions
+* Scalable fraud monitoring framework
+
+---
+
